@@ -1,0 +1,10 @@
+language: python
+python:
+  - "3.6"
+script:
+  - "pip install -U -r requirements.txt"
+  - "pip install -U -r test-requirements.txt"
+  - "flake8 src/"
+  - "pytest -v test/"
+notifications:
+  email: false
